@@ -1,0 +1,14 @@
+name: camisim-base
+channels:
+  - defaults
+  - conda-forge
+  - bioconda
+dependencies:
+  - conda-forge::procps-ng
+  - conda-forge::python=3.11
+  - conda-forge::numpy
+  - conda-forge::pandas
+  - conda-forge::scipy
+  - bioconda::ete3
+  - bioconda::biom-format
+  - bioconda::biopython
