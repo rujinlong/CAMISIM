@@ -33,6 +33,8 @@ workflow metagenomic {
         }
 
     // If no NCBI taxonomy database is given it will be downloaded.
+    // println "params.ncbi_taxdump_file: ${params.ncbi_taxdump_file}"
+    println "params.ncbi_taxdump_file: ${params.ncbi_taxdump_file}"
     if(params.ncbi_taxdump_file.isEmpty()) {
         ncbi_taxdump_file_ch = download_NCBI_taxdump()
     } else {
