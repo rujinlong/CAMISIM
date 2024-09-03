@@ -120,7 +120,7 @@ if __name__ == "__main__":
     genome_id_to_path_map = dict()
 
     # Create the output directory if it does not exist
-    os.makedirs(directory_output)
+    os.makedirs(directory_output, exist_ok=True)
     
     genome_id_to_file_path = parse_tsv_to_dict(genome_id_to_file_path_file)
 
