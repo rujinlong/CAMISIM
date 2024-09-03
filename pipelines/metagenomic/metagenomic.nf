@@ -35,12 +35,7 @@ workflow metagenomic {
     // If no NCBI taxonomy database is given it will be downloaded.
     // println "params.ncbi_taxdump_file: ${params.ncbi_taxdump_file}"
     println "params.ncbi_taxdump_file: ${params.ncbi_taxdump_file}"
-    if(params.ncbi_taxdump_file.isEmpty()) {
-        ncbi_taxdump_file_ch = download_NCBI_taxdump()
-    } else {
-        // this channel holds the ncbi tax dump
-        ncbi_taxdump_file_ch = Channel.fromPath(params.ncbi_taxdump_file)
-    }    
+    ncbi_taxdump_file_ch = Channel.fromPath(params.ncbi_taxdump_file)
 
     // if this parameter is set, the metagenome simulation hast to be from the given profile
     if(!params.biom_profile.isEmpty()) {
