@@ -10,6 +10,10 @@ if (params.pipeline == "metagenomic") {
 }    
 
 workflow {
+    // print launchDir
+    println "launchDir: ${launchDir}"
+    // print projectDir
+    println "projectDir: ${projectDir}"
     if (params.pipeline == "metagenomic") {
         metagenomic()
     } else if (params.pipeline == "metatranscriptomic") {
